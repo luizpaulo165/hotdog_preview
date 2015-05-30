@@ -77,17 +77,21 @@ audio[controls], canvas, video {display:inline-block;*display:inline;*zoom:1}
    iframe img{
        max-width:100%;
    }
-   
+   iframe body{
+       margin:0;
+       padding:0;
+   }
+
    #preview-info{
        font-size:8px;
        color:#111;
        position:relative;
-       
+
    }
    #preview-info br{
        line-height:10px;
    }
-   
+
    #wrap-menu{
        text-align:center;
        position:fixed;
@@ -152,7 +156,7 @@ audio[controls], canvas, video {display:inline-block;*display:inline;*zoom:1}
        -moz-transform:rotate(-90deg);
        -webkit-transform:rotate(-90deg);
    }
-   
+
    #bt-menu .fa-chevron-up{
        top:10px;
        left:13px;
@@ -165,7 +169,7 @@ audio[controls], canvas, video {display:inline-block;*display:inline;*zoom:1}
        -moz-transform:rotate(-360deg);
        -webkit-transform:rotate(-360deg);
    }
-   
+
    #list-menu{
        visibility:hidden;
        position:absolute;
