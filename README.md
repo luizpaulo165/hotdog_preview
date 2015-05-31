@@ -90,6 +90,6 @@ Por fim e não menos importante, iremos colocar as páginas criadas no menu de n
 
 ![menu_index_edit](https://cloud.githubusercontent.com/assets/573227/7900016/cd7ede5e-0715-11e5-90dd-ab626ec55f86.gif)
 
-### Final
+# Por fim!
 
 Bom! Espero que o plugin possa ajudar vocês. Qualquer dúvida, sugestão ou crítica basta criar um issue(github) que eu responderei o mais rápido que puder e com o maior prazer.
