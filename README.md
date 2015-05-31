@@ -51,9 +51,9 @@ Depois que você importou o projeto para o seu editor, agora precisamos criar/ed
     /* Layout da página */
     #hotpage {
         background:url(home.jpg) no-repeat center top;
-        width: 980px;
-        height:1550px;
-        margin: 0 auto;
+        width:;/* valor em px,%,em */
+        height:;/* valor em px,%,em */
+        margin: 0 auto;/* centraliza a div na tela */
     }
 </style>
 <!-- Estilo da página -->
@@ -62,3 +62,34 @@ Depois que você importou o projeto para o seu editor, agora precisamos criar/ed
 
 ```
 ![pasta_view_edit](https://cloud.githubusercontent.com/assets/573227/7899950/4dc699b8-0710-11e5-86e5-a76a77d83613.gif)
+
+### Editando o .html da página
+
+Abra o home.html(ou arquivo que você criou), e agora eremos inserir o estilo que a página receberá e que será apresentado ao cliente. No meu caso, eu irei apenas colocar uma imagem como **background** na div de id **hotpage**. Irei inserir uma largura(width) e altura(height) correspondente ao tamanho da imagem(home.jpg), que no caso é de width=980px e height=1550px(lembrando que esses valorem vão depender do tamanho em que a imagem do layout for exportada).
+
+**Obs**: Para quem tem um pouco mais de intimidade com HTML e CSS, é possível criar uma página interia, e não apenas adicionar uma imagem como background.
+
+![pasta_view_code](https://cloud.githubusercontent.com/assets/573227/7899980/a1b05724-0712-11e5-8c39-c81b7ff0969b.gif)
+
+### Adicionando as páginas no menu
+
+Por fim e não menos importante, iremos colocar as páginas criadas no menu de navegação, para que o usuário/cliente possa navegar sem problemas. Mas primeiro, precisamos entende onde e como deve ficar a estrutura do menu de navegação:
+
+```
+<nav id="list-menu">
+    <a target="iframe-master" href="view/nome do arquivo.html" data-name="Nome que vai aparecer no título da página"></a>
+</nav>
+```
+
+* Nós iremos acessar o arquivo **index.html** que encontra-se na raiz do projeto;
+* Vamos procurar pela div com id **list-menu**;
+* Você irá apenas editar os campos **href**(caminho onde a página encontra-se, ou seja, dentro da pasta view) e o **data-name**(Nome que ira aparecer no título da página e nos itens do Menu);
+* Salvamos o arquivo index.html, abrimos o mesmo no seu navegador predileto e Badabím! Badabúm! A sua visualização dos previews está pronta.
+
+**Obs**: Modificar o **target** no link, ou qualquer outra tag dentro do aquivo index.html pode danificar o funcionamento do plugin, com tudo, deve-se apenas alterar o arquivo se você souber realmente o que está fazendo.
+
+![menu_index_edit](https://cloud.githubusercontent.com/assets/573227/7900016/cd7ede5e-0715-11e5-90dd-ab626ec55f86.gif)
+
+### Final
+
+Bom! Espero que o plugin possa ajudar vocês. Qualquer dúvida, sugestão ou crítica basta criar um issue(github) que eu responderei o mais rápido que puder e com o maior prazer.
