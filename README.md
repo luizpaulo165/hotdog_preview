@@ -73,7 +73,7 @@ Abra o home.html(ou arquivo que você criou), e agora eremos inserir o estilo qu
 
 ### Adicionando as páginas no menu
 
-Por fim e não menos importante, iremos colocar as páginas criadas no menu de navegação, para que o usuário/cliente possa navegar sem problemas. Mas primeiro, precisamos entende onde e como deve ficar a estrutura do menu de navegação:
+Por último e não menos importante, iremos colocar as páginas criadas no menu de navegação, para que o usuário/cliente possa navegar sem problemas. Mas primeiro, precisamos entende onde e como deve ficar a estrutura do menu de navegação:
 
 ```
 <nav id="list-menu">
