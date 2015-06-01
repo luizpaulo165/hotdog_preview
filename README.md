@@ -92,4 +92,4 @@ Por último e não menos importante, iremos colocar as páginas criadas no menu 
 
 # Por fim!
 
-Bom! Espero que o plugin possa ajudar vocês. Qualquer dúvida, sugestão ou crítica basta criar um issue(github) que eu responderei o mais rápido que puder e com o maior prazer. =)
+Bom! Espero que o plugin possa ajudar vocês. Qualquer dúvida, sugestão ou crítica basta criar um issue(github) que eu responderei o mais rápido que puder e com o maior prazer. =D
