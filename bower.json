@@ -1,0 +1,33 @@
+{
+  "name": "hotdog-preview",
+  "version": "0.0.1",
+  "authors": [
+    "Luiz Paulo Valença <luizpaulo165@gmail.com>"
+  ],
+  "description": "Pensando em facilitar o entendimento e navegação dos layouts, criei visualizador de layout Hotdog. Com uma navegação simples e funcional, o cliente pode visualizar e navegar por todas as páginas que forem apresentadas de maneira rápida e prática. O Designer do projeto deve apenas entender um pouco de html e css básicos, para que possa adaptar o seu layout na visualização que deseja e integrar as páginas do projeto ao menu de navegação. Então vou fazer um breve tutorial de como cricar o seu preview usando o Hotdog. Vamos lá! =)",
+  "main": "src",
+  "keywords": [
+    "hotdog",
+    "preview",
+    "preview",
+    "para",
+    "layouts",
+    "navegador",
+    "de",
+    "layouts",
+    "mostone",
+    "luizpaulo165"
+  ],
+  "license": "MIT",
+  "homepage": "http://luizpaulo165.github.io/hotdog_preview/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

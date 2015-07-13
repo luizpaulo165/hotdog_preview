@@ -1,5 +1,5 @@
 # Hotdog Preview Layout
-v.1.0.1
+v.0.0.1
 
 Pensando em facilitar o entendimento e navegação dos layouts, criei visualizador de layout **Hotdog**.
 
