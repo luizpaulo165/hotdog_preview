@@ -90,6 +90,11 @@ Por último e não menos importante, iremos colocar as páginas criadas no menu 
 
 ![menu_index_edit](https://cloud.githubusercontent.com/assets/573227/7900016/cd7ede5e-0715-11e5-90dd-ab626ec55f86.gif)
 
+# BA-DA-BING! BA-DA-BOOM!
+Voilà! O seu layout pode ser navegado tranquilamente apenas usando o menu. =D
+
+![menu_index_edit](https://cloud.githubusercontent.com/assets/573227/8660219/073fca1c-2986-11e5-8207-3530c19af9aa.gif)
+
 # Por fim!
 
 Bom! Espero que o plugin possa ajudar vocês. Qualquer dúvida, sugestão ou crítica basta criar um issue(github) que eu responderei o mais rápido que puder e com o maior prazer. \,,/_
