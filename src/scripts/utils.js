@@ -6,6 +6,7 @@ Application = {
 		this.menu();
 		this.switchPage();
 		this.callMenu();
+		this.activeResponsive();
 	},
 
 	//IframePage
@@ -15,8 +16,7 @@ Application = {
 			var w = $(window).width(),
 			h = $(window).height();
 
-			$('iframe').css
-			({
+			$('#website').css({
 				'width': w + 'px',
 				'height': h + 'px'
 			});
@@ -47,9 +47,12 @@ Application = {
 			var items = [],
 			firstPage = data[0].page;
 
-			// First link iframe
-			$('iframe').attr({
+			$('#website').show()
+			.attr({
 				'src': 'view/' + firstPage + '.html'
+			});
+			$('#mobile').attr({
+				'src': 'view/' + firstPage + '-responsivo.html'
 			});
 
 			$.each( data, function( val, item ){
@@ -58,6 +61,7 @@ Application = {
 				descPage = item.description,
 				namePage = "",
 				linkName = "";
+				responsive = item.responsive;
 
 		    // Text link
 		    for (var i = 0; i < linkPage.length; i++) {
@@ -71,12 +75,22 @@ Application = {
 		    	namePage = linkPage;
 		    }
 
-		    // create element list
-		    var linksElem = $('<div />',{
-		    	'class': 'listLinks',
-		    	'data-link': linkPage,
-		    	'html':'<span class="idPage">'+ linkName +'</span> <span class="titlePage">'+ titleLink +'</span> <p>'+ descPage +'</p> <span class="bullet"></span>'
-		    });
+		    // check responsive
+		    if (responsive) {
+		    	// create element list
+			    var linksElem = $('<div />',{
+			    	'class': 'listLinks responsive',
+			    	'data-link': linkPage,
+			    	'html':'<span class="idPage">'+ linkName +'</span> <span class="titlePage">'+ titleLink +'</span> <p>'+ descPage +'</p> <span class="bullet"></span><div class="wrap-active-responsive"><span class="bt-responsive"></span></a>'
+			    });
+		    }else{
+		    	// create element list
+			    var linksElem = $('<div />',{
+			    	'class': 'listLinks',
+			    	'data-link': linkPage,
+			    	'html':'<span class="idPage">'+ linkName +'</span> <span class="titlePage">'+ titleLink +'</span> <p>'+ descPage +'</p> <span class="bullet"></span>'
+			    });
+		    }
 
 		    // create links
 		    items.push( linksElem );
@@ -106,8 +120,20 @@ Application = {
 			$('.listLinks').removeClass('active');
 			self.addClass('active');
 
-			// First link iframe
-			$('iframe').attr({
+			if (self.hasClass('responsive')) {
+				$('#mobile').attr({
+					'src': 'view/'+ selfLink +'-responsivo.html'
+				});
+				if (self.find('.wrap-active-responsive').hasClass('active')) {
+					$('#website').hide();
+					$('#wrap-mobile').show();
+				}
+			}else{
+				$('#wrap-mobile').hide();
+				$('#website').show();
+			}
+
+			$('#website').attr({
 				'src': 'view/'+ selfLink +'.html'
 			});
 
@@ -115,13 +141,14 @@ Application = {
 			$('title').html(selfTitle.text());
 
 			// Close menu
-			$('#wrapLinks, #wrap-menu, #wrap-menu #bt-menu').removeClass('active');
+			// $('#wrapLinks, #wrap-menu, #wrap-menu #bt-menu').removeClass('active');
 		});
 	},
 
 	// CallMenu
 	callMenu: function (){
 		$('#wrap-menu').click(function (){
+
 			if ($('#wrapLinks').hasClass('active')) {
 				$('#wrapLinks').removeClass('active');
 				$(this).removeClass('active');
@@ -131,6 +158,25 @@ Application = {
 				$(this).addClass('active');
 				$(this).find('#bt-menu').addClass('active');
 			}
+
+		});
+	},
+
+	// activeResponsive
+	activeResponsive: function (){
+		$(document).on('click','.wrap-active-responsive', function (){
+			var self = $(this);
+
+			if (self.hasClass('active')) {
+				self.removeClass('active');
+				$('#wrap-mobile').hide();
+				$('#website').show();
+			}else{
+				self.addClass('active');
+				$('#website').hide();
+				$('#wrap-mobile').show();
+			}
+
 		});
 	}
 

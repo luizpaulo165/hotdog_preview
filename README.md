@@ -16,10 +16,12 @@ A pasta do plugin é dividida da seguinte maneira:
 * Index
 * View
 * Src
+* Menu
 
 **Index** - É toda a estrutura html base.<br />
 **View** - É onde ficarão toda as páginas que serão criadas e o favicon do projeto.<br />
 **Src** - São todos as ferramentas nescessárias para que o plugin funcione.
+**Menu** - Onde fica localizado o arquivo "menu.json", no qual irá receber todas as informações das páginas do seu projeto.
 
 **OBS**: No caso da pasta **src**, ela não será usada para desenvolver os previews.
 
