@@ -3,7 +3,7 @@
         "title":"Home",
         "page":"home",
         "description": "Página Inicial do projeto",
-        "responsive": false
+        "responsive": true
     },
     "1":{
         "title":"Projetos",

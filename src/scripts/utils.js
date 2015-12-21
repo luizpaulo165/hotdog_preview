@@ -112,30 +112,37 @@ Application = {
 	// SwitchPage
 	switchPage: function () {
 		$(document).on('click','.listLinks', function (){
+			// active page
+			$('.listLinks').removeClass('active');
+
+			// variables
 			var self = $(this),
 			selfLink = self.data('link'),
 			selfTitle = self.find('.titlePage');
 
-			// active page
-			$('.listLinks').removeClass('active');
 			self.addClass('active');
 
 			if (self.hasClass('responsive')) {
-				$('#mobile').attr({
-					'src': 'view/'+ selfLink +'-responsivo.html'
-				});
 				if (self.find('.wrap-active-responsive').hasClass('active')) {
+					$('#mobile').attr({
+						'src': 'view/'+ selfLink +'-responsivo.html'
+					});
 					$('#website').hide();
 					$('#wrap-mobile').show();
+				}else{
+					$('#website').attr({
+						'src': 'view/'+ selfLink +'.html'
+					});
+					$('#wrap-mobile').hide();
+					$('#website').show();
 				}
 			}else{
+				$('#website').attr({
+					'src': 'view/'+ selfLink +'.html'
+				});
 				$('#wrap-mobile').hide();
 				$('#website').show();
 			}
-
-			$('#website').attr({
-				'src': 'view/'+ selfLink +'.html'
-			});
 
 			// Title Page First Page
 			$('title').html(selfTitle.text());

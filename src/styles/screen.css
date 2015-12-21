@@ -352,6 +352,14 @@
   -webkit-border-radius:20px;
   transition:all 0.3s linear;
   -webkit-transition:all 0.3s linear;
+  transition:all 0.3s;
+  -webkit-transition:all 0.3s;
+}
+.wrap-active-responsive:hover{
+  box-shadow:0 0 3px 0px #F06292;
+  -webkit-box-shadow:0 0 3px 0px #F06292;
+  transition:all 0.3s;
+  -webkit-transition:all 0.3s;
 }
 .wrap-active-responsive:after{
   content:'off';
@@ -387,6 +395,12 @@
   background:#00ACED;
   transition:all 0.3s linear;
   -webkit-transition:all 0.3s linear;
+}
+.wrap-active-responsive.active:hover{
+  box-shadow:0 0 3px 0px #00ACED;
+  -webkit-box-shadow:0 0 3px 0px #00ACED;
+  transition:all 0.3s;
+  -webkit-transition:all 0.3s;
 }
 .wrap-active-responsive.active .bt-responsive{
   left:2px;
