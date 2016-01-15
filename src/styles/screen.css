@@ -90,12 +90,13 @@
    overflow-x:hidden;
  }
  #mobile{
-   width:377px;
-   height:578px;
+  background:#fff;
+   width:318px;
+   height:569px;
    display:block;
    position:absolute;
-   left:45px;
-   top:90px;
+   left:81px;
+   top:73px;
    overflow-x:hidden;
  }
  iframe img{
